@@ -1,4 +1,5 @@
-import ...
+import kubernetes
+import pykube
 
 api = kubernetes_api()
 
