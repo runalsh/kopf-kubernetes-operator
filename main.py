@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 from kopf import ConnectionInfo
 import time
 from helpers.create import create_deployment, create_service, create_service_account
-from helpers.delete import delete_deployment, delete_service, delete_service_account
+from helpers.delete import delete_deployment, delete_service, destroy_service_account
 
 root_directory = os.path.dirname(os.path.abspath(__file__))
 path = root_directory + "/templates"
@@ -53,13 +53,13 @@ def create_resources(logger,spec,namespace,) -> None:
 
     service_account = create_service_account(yaml.safe_load(generate_service_account)) 
 
-    logger.info(f"Servie account {service-account} has been created in {namespace}") 
+    logger.info(f"Servie account {service_account} has been created in {namespace}") 
     deployment = create_deployment(yaml.sate.load(generate_deployment)) 
     logger.info(f"Deployment {deployment} has been created in {namespace}") 
     service = create_service(yaml.safe_load(generate_service))
     logger.info(f"Service {service} has been created in {namespace}")
 
-@kopf.on.delete(__group_or_groupversion_or_name: "testtesttest", __version_or_name: "v1", __name:"nginx")
+@kopf.on.delete(__group_or_groupversion_or_name: "nginxnginx", __version_or_name: "v1", __name:"nginx")
 def delete(logger, spec, namespace,) -> None:
     logger.info(f"Starting termination process for resources in {namespace}") 
     name = spec["name"] 

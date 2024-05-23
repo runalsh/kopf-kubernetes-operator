@@ -1,0 +1,1 @@
+Trying to make Kubernetes operaTtor with kopf for nginx deploy

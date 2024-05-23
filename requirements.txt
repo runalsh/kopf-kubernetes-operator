@@ -1,0 +1,8 @@
+kopf
+kubernetes
+loguru
+PyYAML
+jinja2
+bcrypt
+pykube
+requests
