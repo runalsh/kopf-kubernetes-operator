@@ -1,1 +1,1 @@
-Trying to make Kubernetes operaTtor with kopf for nginx deploy
+Trying to make Kubernetes operator with kopf for nginx deploy
